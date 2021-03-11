@@ -1,10 +1,10 @@
  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap');
 
 body {
-    margin: 0;
     font-family: 'Lora', serif;
     width: 100%;
     margin: 0 auto;
+    max-width: 1300px;
 } 
 *, 
 *:before,
@@ -16,43 +16,105 @@ body {
      background: url(https://res2.weblium.site/res/5ed0f79571a6c000211a3d8a/5ed8be96bebfe6002207efc0_optimized_1920);
     width: 100%;
     height: 100vh;
+    overflow: auto;
     
  }
-
-
  nav {
      display: flex;
-     justify-content: space-between;
-     background: rgba(139, 212, 30, 0.5);
-     margin: 0;
-     padding-top: 17px;
-     padding-bottom: 25px;
      align-items: center;
-     padding-left: 100px;
-     padding-right: 100px;
-
+     justify-content: space-around;
  }
- .logo {
+ .burger-icon {
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burger-icon:hover {
+    cursor: pointer;
+}
+
+#burger-checkbox {
+    display: none;}
+    
+header .menu {
+    list-style-type: none;
+    display: none;
+}
+
+header input:checked ~ .menu  {
+    display: flex;
+}
+ 
+header .menu {
+    flex-direction: column;
+}
+
+ .menu  {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end; 
+       padding: 3px;
+        align-items: baseline;
+    }
+ 
+.nav-link {  
+       font-size: 17px;
+       text-decoration: none;
+       color: black;
+       padding: 10px;
+       display: flex;
+       align-items: baseline;
+    }
+        
+    .logo {
      font-size: 32px;
-       
-     
- }    
+     text-align: center;    
+    }
+    
   .subtitle {
       font-size: 18px;
       font-weight: 100;
-     align-items: center;
+      text-align: center;
   }
   .social-networks {
      display: flex; 
      display: inline-block;
-     padding: 10px;
-    width: 25px;
-    height: 25px;
-    
+     
 
+     padding: 10px;
+     width: 25px;
+     height: 25px;
   }
- 
- .nav-link {
+  .social-icon {
+     width: 25px;
+    height: 25px;
+    padding: 3px;  
+}
+   
+@media (min-width: 990px) {
+   header nav {
+        display: flex;
+    }
+
+    header .burger-icon {
+        display: none;}
+
+    header .menu {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        align-items: center;
+        flex-direction: row;}
+    nav {
+     display: flex;
+     justify-content: space-between;
+     background: rgba(139, 212, 30, 0.5);
+     margin: 0;
+     padding: 17px 100px 25px 100px;
+     align-items: center;
+ }
+    .nav-link {
      font-size: 17px;
      text-decoration: none;
      color: black;
@@ -61,11 +123,43 @@ body {
  .nav-link:hover {
      text-decoration: underline;
      color: rgba(139, 212, 30, 0.5);
+}
+
+ .logo {
+     font-size: 32px;
+     text-align: center;    
+ }    
+  .subtitle {
+      font-size: 18px;
+      font-weight: 100;
+      text-align: center;
+  }
+  .social-networks {
+     display: flex; 
+     display: inline-block;
+     padding: 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .social-icon {
+     width: 25px;
+    height: 25px;
+    padding: 3px;  
+  }
+}
+/*header banner*/
+
+   .banner, .buttons {
+     margin: 50px 70px 50px 30px;
+     overflow: auto;
+
  }
- .banner {
-     padding-left: 100px;
-     padding-right: 100px;
-     max-width: 800px;
+ @media (max-width: 664px) {
+    header {
+    height:  auto;
+    margin-bottom: 50px;
+}
+
  }
  h1 {
      font-size: 42px;
@@ -77,8 +171,9 @@ body {
      font-size: 18px;
  }
    
- .button {
+ .button-one {
    display: inline-block;
+   flex-basis: content;
    text-align: center;
    vertical-align: top;
    border: 2px solid rgba(139, 212, 30, 0.5);
@@ -89,7 +184,35 @@ body {
    background: rgba(139, 212, 30, 0.8);
    color: white;
    font-weight: 600;
+   text-decoration: none;
     
  }   
 
- 
+ .button-two {
+   display: inline-block;
+   flex-basis: content;
+   text-align: center;
+   vertical-align: top;
+   border: 2px solid rgba(139, 212, 30, 0.5);
+   border-radius: 30px;
+   padding: 10px 15px;
+   margin: 50px 5px;
+   text-decoration: none;
+   background: rgba(139, 212, 30, 0.8);
+   color: white;
+   font-weight: 600;
+   text-decoration: none;
+   margin-left: 5px;
+ }  
+ .buttons {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     flex-basis: content;
+     text-align: center;
+     flex-wrap: wrap;
+     flex-basis: auto;
+ } 
+   
+
+  
