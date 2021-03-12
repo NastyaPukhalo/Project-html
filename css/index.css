@@ -13,9 +13,9 @@ body {
 }
  /* Header */
  header {
-     background: url(https://res2.weblium.site/res/5ed0f79571a6c000211a3d8a/5ed8be96bebfe6002207efc0_optimized_1920);
+     background: url(/img/header-background.png);
     width: 100%;
-    height: 100vh;
+    height: auto;
     overflow: auto;
     
  }
@@ -57,6 +57,7 @@ header .menu {
        padding: 3px;
         align-items: baseline;
     }
+
  
 .nav-link {  
        font-size: 17px;
@@ -69,7 +70,9 @@ header .menu {
         
     .logo {
      font-size: 32px;
-     text-align: center;    
+     font-weight: 400;
+     text-align: center; 
+     padding-right: 10px;   
     }
     
   .subtitle {
@@ -80,26 +83,38 @@ header .menu {
   .social-networks {
      display: flex; 
      display: inline-block;
+    
+      
      
 
      padding: 10px;
      width: 25px;
      height: 25px;
   }
+
+   body:not(.social-networks) { flex-direction: column; }
+
   .social-icon {
      width: 25px;
     height: 25px;
     padding: 3px;  
+     
+     
 }
    
 @media (min-width: 990px) {
-   header nav {
+    header {
+        height: 100vh;
+    }
+
+    header nav {
         display: flex;
     }
 
     header .burger-icon {
-        display: none;}
-
+        display: none;
+        
+}
     header .menu {
         display: flex;
         justify-content: space-between;
@@ -150,8 +165,10 @@ header .menu {
 /*header banner*/
 
    .banner, .buttons {
-     margin: 50px 70px 50px 30px;
+     margin: 30px 70px 50px 30px;
      overflow: auto;
+     display: inline-block;
+
 
  }
  @media (max-width: 664px) {
@@ -178,12 +195,12 @@ header .menu {
    vertical-align: top;
    border: 2px solid rgba(139, 212, 30, 0.5);
    border-radius: 30px;
-   padding: 10px 15px;
-   margin: 50px 100px;
+   padding: 15px 20px;
+    
    text-decoration: none;
-   background: rgba(139, 212, 30, 0.8);
+   background: rgba(139, 212, 30, 1);
    color: white;
-   font-weight: 600;
+   font-weight: 500;
    text-decoration: none;
     
  }   
@@ -193,26 +210,38 @@ header .menu {
    flex-basis: content;
    text-align: center;
    vertical-align: top;
-   border: 2px solid rgba(139, 212, 30, 0.5);
+   border: 1px solid black;
    border-radius: 30px;
-   padding: 10px 15px;
-   margin: 50px 5px;
+   padding: 15px 20px;
+   
    text-decoration: none;
-   background: rgba(139, 212, 30, 0.8);
-   color: white;
-   font-weight: 600;
+   background: none;
+   color: black;
+   font-weight: 500;
    text-decoration: none;
    margin-left: 5px;
  }  
  .buttons {
-     display: flex;
-     flex-direction: row;
-     justify-content: flex-start;
-     flex-basis: content;
-     text-align: center;
-     flex-wrap: wrap;
-     flex-basis: auto;
+      
+     
+     display: inline-block;
+     line-height: 1; 
+      
+     
+      
  } 
+
+ @media (max-width: 455px) {
+     .button-two {
+        margin-top: 10px;  
+     } 
+ }
+
+ @media (min-width: 800px) {
+     .banner {
+         max-width: 550px;
+     }
+
+ }
    
 
-  
