@@ -13,7 +13,8 @@ body {
 }
  /* Header */
  header {
-     background: url(/img/header-background.png);
+    background-image: url(../img/header-background.png);
+    background-size: cover;
     width: 100%;
     height: auto;
     overflow: auto;
@@ -165,9 +166,10 @@ header .menu {
 /*header banner*/
 
    .banner, .buttons {
-     margin: 30px 70px 50px 30px;
+     margin: 10px 70px 50px 30px;
      overflow: auto;
      display: inline-block;
+     
 
 
  }
@@ -190,7 +192,7 @@ header .menu {
    
  .button-one {
    display: inline-block;
-   flex-basis: content;
+    
    text-align: center;
    vertical-align: top;
    border: 2px solid rgba(139, 212, 30, 0.5);
@@ -226,6 +228,7 @@ header .menu {
      
      display: inline-block;
      line-height: 1; 
+     object-position: bottom;
       
      
       
@@ -243,5 +246,7 @@ header .menu {
      }
 
  }
-   
 
+ /*Categories of plants карусель*/
+
+   
