@@ -2,3 +2,40 @@
       display: flex;
       justify-content: left;
  }
+ #pick-of-the-month, h3 {
+     color: #0d3c00;
+     text-align: center;
+ }
+
+.testimonial {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+     
+ .testimonial > img {
+     object-fit: cover;
+     object-position: 61.723% 0%;   
+ }
+  .answer > img {
+      object-position: 33.051% 94.118%;
+      border-radius: 90%;
+ 
+  }
+  @media (min-width: 768px) {
+      .testimonial {
+         display: flex;
+         
+      }
+      .testimonial > img {
+          max-width: 50%;
+        object-fit: contain;
+        align-self: flex-start;
+      }
+      .text {
+          flex: 1 1 auto;
+          width: 50%;
+           
+      }
+  
+  }
