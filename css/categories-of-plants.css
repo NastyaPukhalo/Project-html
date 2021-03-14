@@ -1,1 +1,4 @@
- 
+ .categories-of-plants > img {
+      display: flex;
+      justify-content: left;
+ }
